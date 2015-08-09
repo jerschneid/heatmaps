@@ -1,0 +1,14 @@
+ - Create a "Start with X data" drop down
+ - Create a way to load data from file (for now... back end stuff later)
+ - Create way to output data in usuable fashion
+ - Figure out how to add more rows to table
+ - Understand columns better... how do they work. Why does regions break poland?
+
+ - Figure out how to let users type in a country or state... auto complete or something? Every location could be stored in the DB that way?
+
+
+ - Google Analytics
+ - Domain
+ - 	
+ - Download JPG/SVG? 
+ - Save to specific url

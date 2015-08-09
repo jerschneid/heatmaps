@@ -1,49 +1,111 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <title>Heat Maps</title>
+  <title>Heat Maps</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/heatmaps.css" rel="stylesheet">
+  <link rel="stylesheet" media="screen" href="handsontable/handsontable.full.css">  
 
-    <!-- Custom styles for this template -->
-    <link href="css/heatmaps.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type='text/javascript' src='https://www.google.com/jsapi'></script>
+  <script src="handsontable/handsontable.full.js"></script>
+  <script src="js/heatmaps.js"></script> 
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
+      <![endif]-->
+    </head>
 
-  <body>
-
-
-    <div class="container">
-
-      <div class="starter-template">
-        <h1>Bootstrap starter template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-      </div>
-
-      <div id="map" style="width: 900px; height: 500px;"></div>
-
-    </div><!-- /.container -->
+    <body>
 
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script type='text/javascript' src='https://www.google.com/jsapi'></script>
-    <script src="js/heatmaps.js"></script>
+      <div class="container">
+
+        <div class="starter-template">
+          <h1>Map Chart Generator</h1>
+          <p class="lead">Quickly and easily create a cool map chart!</p>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <select id="region">
+              <option value="world">World</option>
+              <option disabled>──────────</option>
+              <option value="002">Africa</option>
+              <option value="015">Nothern Africa</option>
+              <option value="011">Western Africa</option>
+              <option value="017">Middle Africa</option>
+              <option value="014">Eastern Africa</option>
+              <option value="018">Southern Africa</option>
+              <option disabled>──────────</option>
+              <option value="150">Europe</option>
+              <option value="154">Northern Europe</option>
+              <option value="155">Western Europe</option>
+              <option value="151">Eastern Europe</option>
+              <option value="039">Southern Europe</option>
+              <option disabled>──────────</option>
+              <option value="019">Americas</option>
+              <option value="021">Northern America</option>
+              <option value="029">Caribbean</option>
+              <option value="013">Central America</option>
+              <option value="005">South America</option>
+              <option disabled>──────────</option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option disabled>──────────</option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+
+            </select>
+
+            <select id="displayMode">
+              <option value="regions">Regions</option>
+              <option value="markers">Markers</option>
+            </select>
+
+
+            <div id="basic_example"></div>
+            <div>
+              <a href="#" class="add-rows" data-num-rows="1">+1 row</a> - 
+              <a href="#" class="add-rows" data-num-rows="10">+10 rows</a>
+            </div>
+
+          </div>
+          <div class="col-md-8">
+            <div id="map"></div>
+          </div>
+        </div>
+
+
+
+
+
+      </div><!-- /.container -->
+
+
+
   </body>
-</html>
+  </html>
