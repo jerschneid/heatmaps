@@ -1,0 +1,17 @@
+{
+  "name": "emberserver",
+  "version": "1.0.0",
+  "description": "Test Ember Server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.13.3",
+    "mongoose": "^4.1.2",
+    "mongodb": "~2.0.33",
+    "monk": "~1.0.1"
+  }
+}

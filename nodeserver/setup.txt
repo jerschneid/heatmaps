@@ -1,0 +1,17 @@
+To make site run:
+
+ - CD to server folder
+ - run: mongod
+ - run: nodemon server.js 
+ - CD to client folder
+ - run: ember serve
+ - navigate to: http://locahost:3000
+
+
+
+
+To generate an ember model:
+ - ember generate model note
+
+Create REST.adapter to load/save data
+ - ember generate adapter application
