@@ -1,8 +1,8 @@
 
 var express = require('express');
-var mongoose = require('mongoose');
 var mongo = require('mongodb');
 var monk = require('monk');
+var bodyParser = require('body-parser')
 var db = monk('mongodb://localhost/emberData');
 var maps = require('./routes/maps');
 
@@ -14,6 +14,12 @@ app.use(function(req, res, next) {
   	res.header('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE, OPTIONS');
     next();
 });
+
+// parse application/x-www-form-urlencoded 
+app.use(bodyParser.urlencoded({ extended: false }))
+ 
+// parse application/json 
+app.use(bodyParser.json())
 
 // Make our db accessible to our router
 app.use(function(req,res,next){
